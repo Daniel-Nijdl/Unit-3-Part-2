@@ -1,3 +1,14 @@
+/* Variables */
+:root{
+    --Html-background: rgb(246, 177, 177);
+    --Shadow: rgb(51, 51, 51);
+    --Nav-active: rgb(220, 27, 27);
+    --Spotlight: rgb(171, 171, 171);
+    --Text-backround: rgb(211, 211, 211);
+    --Text-color: rgb(111, 111, 111);
+}
+
+
 
 /* =============================================
 Base styles used by All Screens DO NOT EDIT BELOW
@@ -46,3 +57,313 @@ Base styles used by All Screens DO NOT EDIT ABOVE
 ============================================= */
 
 /* HTML and Body Styles */
+
+html{
+    background-color: var(--Html-background);
+    font-style: "Verdana, Geneva, sans-serif";
+    font-size: 12px;
+}
+
+body{
+    background: white;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--Shadow )10px 10px 10px, var(--Shadow) -10px 10px 25px;
+}
+
+header body{
+    background: white;
+    width: 100%;
+}
+
+image #logoImage{
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin: 15px;
+}
+
+nav ul .top{
+    margin: 10px;
+}
+
+nav ul .top anchor{
+    margin: 10px;
+    color: white;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+nav ul .top anchor::hover{
+    color: var(--Nav-active);
+    text-shadow: 0px 0px 2px black, 0px 0px 15px white;
+}
+
+p img:nth-child(2){
+    float: right;
+    width: 45%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 120px;
+    margin-left: 50px;
+    transform: translate(-60px) rotate(30);
+    box-shadow: var(--Shadow) 10px -10px 30px;
+}
+
+section .spotlight{
+    background-color: var(--Spotlight);
+    padding-bottom: 15px;
+    overflow: auto;
+}
+
+h1 .spotlight{
+    font-size: 2.5rem;
+    color: var(--Text-color);
+    text-shadow: white -2px 0px 1px, white -5px 0px 30px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+}
+
+section img .spotlight{
+    width: 35%;
+    float: left;
+    display: block;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+section p .spotlight{
+    margin-bottom: none;
+}
+
+aside{
+    background: var(--Text-backround);
+}
+
+aside anchor{
+    text-emphasis-color: var(--Nav-active);
+}
+
+aside h1{
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: 0.4rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-bottom: 25px;
+    margin-left: 0px;
+}
+
+aside img{
+    display: block;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Description List */
+li .description{
+    text-align: center;
+}
+
+li .description #description{
+    margin-bottom: 20px;
+}
+/* Descriptions in "Description List" */
+
+nav .bottom{
+    background-color: var(--Nav-active);
+    color: var(--Text-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+nav ul li .bottom{
+    color: white;
+}
+
+footer p{
+    color: var(--Text-color);
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: black;
+    margin: none;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+nav ul .bottom{
+    flex-shrink: 1;
+    flex-grow: 0;
+    max-width: 150px;
+}
+
+@media(min-width: 480px){
+
+body{
+    background-color: var(--Shadow);
+    color: var(--Text-backround);
+    }
+
+aside{
+    display: none;
+}
+
+article img{
+    display: none;
+}
+
+section .spotlight{
+    display: none;
+}
+
+nav ul .top{
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+nav ul li .top{
+    font-size: 2.2rem;
+    flex-basis: 130px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+nav ul li anchor .top{
+    padding-top: 50%;
+    padding-bottom: 50%;
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+nav.top ul li:nth-of-type(1){
+    background: url(images/cw_image01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav .top ul li:nth-of-type(2){
+    background: url(images/cw_image01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav .top ul li:nth-of-type(3){
+    background: url(images/cw_image01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav .top ul li:nth-of-type(4){
+    background: url(images/cw_image01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav .top ul li:nth-of-type(5){
+    background: url(images/cw_image01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav .top ul li:nth-of-type(6){
+    background: url(images/cw_image01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p #links{
+    display: flexbox;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+p anchor #links{
+    background-color: var(--Nav-active);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+}
+
+@media(min-width: 480px){
+body{
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+article{
+    flex-basis: 400px;
+    flex-grow: 2;
+    flex-shrink: 1;
+}
+
+aside{
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+nav ul .top{
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: var(--Text-backround);
+    height: 50px;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
