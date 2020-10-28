@@ -67,22 +67,20 @@ html{
 body{
     background: white;
     max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: var(--Shadow )10px 10px 10px, var(--Shadow) -10px 10px 25px;
+    margin: 0 auto;
+    box-shadow: var(--Shadow)10px 10px 25px, var(--Shadow) -10px 10px 25px;
 }
 
-header body{
+body>header{
     background: white;
     width: 100%;
 }
 
-image #logoImage{
+img#logoImage{
     display: block;
     width: 100%;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 p{
@@ -91,12 +89,11 @@ p{
     margin: 15px;
 }
 
-nav ul .top{
+nav.top ul li {
     margin: 10px;
 }
 
-nav ul .top anchor{
-    margin: 10px;
+nav.top ul a{
     color: white;
     display: block;
     font-size: 1.2rem;
@@ -107,29 +104,29 @@ nav ul .top anchor{
     padding-right: 0%;
 }
 
-nav ul .top anchor::hover{
+nav.top ul a:hover{
     color: var(--Nav-active);
     text-shadow: 0px 0px 2px black, 0px 0px 15px white;
 }
 
-p img:nth-child(2){
+p:nth-child(2) img{
     float: right;
     width: 45%;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 120px;
     margin-left: 50px;
-    transform: translate(-60px) rotate(30);
+    transform: translateY(60px) rotate(30deg);
     box-shadow: var(--Shadow) 10px -10px 30px;
 }
 
-section .spotlight{
+section.spotlight{
     background-color: var(--Spotlight);
     padding-bottom: 15px;
     overflow: auto;
 }
 
-h1 .spotlight{
+section.spotlight h1{
     font-size: 2.5rem;
     color: var(--Text-color);
     text-shadow: white -2px 0px 1px, white -5px 0px 30px;
@@ -137,9 +134,10 @@ h1 .spotlight{
     padding-right: 15px;
     padding-bottom: 10px;
     padding-left: 0px;
+    text-align: right;
 }
 
-section img .spotlight{
+section.spotlight img{
     width: 35%;
     float: left;
     display: block;
@@ -149,7 +147,7 @@ section img .spotlight{
     margin-left: 15px;
 }
 
-section p .spotlight{
+section.spotlight p{
     margin-bottom: none;
 }
 
@@ -157,7 +155,7 @@ aside{
     background: var(--Text-backround);
 }
 
-aside anchor{
+aside a{
     text-emphasis-color: var(--Nav-active);
 }
 
@@ -175,23 +173,24 @@ aside h1{
 aside img{
     display: block;
     width: 30%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-/* Description List */
-li .description{
+dl{
     text-align: center;
 }
 
-li .description #description{
+footer{
+    width: 100%;
+}
+
+dl dd{
     margin-bottom: 20px;
 }
-/* Descriptions in "Description List" */
 
-nav .bottom{
+nav#bottom{
     background-color: var(--Nav-active);
     color: var(--Text-color);
     padding: 15px;
@@ -201,9 +200,14 @@ nav .bottom{
     justify-content: center;
 }
 
-nav ul li .bottom{
-    color: white;
+nav#bottom ul li{
+    font-size: 1rem;
+    line-height: 1.8rem;
 }
+
+nav#bottom ul a{
+    color: white;
+} 
 
 footer p{
     color: var(--Text-color);
@@ -217,13 +221,11 @@ footer p{
     padding-left: 10px;
 }
 
-nav ul .bottom{
-    flex-shrink: 1;
-    flex-grow: 0;
-    max-width: 150px;
+nav#bottom ul{
+    flex: 0 1 150px;
 }
 
-@media(min-width: 480px){
+@media(max-width: 480px){
 
 body{
     background-color: var(--Shadow);
@@ -238,24 +240,24 @@ article img{
     display: none;
 }
 
-section .spotlight{
+section.spotlight{
     display: none;
 }
 
-nav ul .top{
-    display: flexbox;
+nav.top ul{
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
-nav ul li .top{
+nav.top ul li{
     font-size: 2.2rem;
     flex-basis: 130px;
     flex-grow: 1;
     flex-shrink: 1;
 }
 
-nav ul li anchor .top{
+nav.top ul li a{
     padding-top: 50%;
     padding-bottom: 50%;
     padding-left: 0%;
@@ -269,49 +271,49 @@ nav.top ul li:nth-of-type(1){
     background-size: cover;
 }
 
-nav .top ul li:nth-of-type(2){
-    background: url(images/cw_image01.png);
+nav.top ul li:nth-of-type(2){
+    background: url(images/cw_image02.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-nav .top ul li:nth-of-type(3){
-    background: url(images/cw_image01.png);
+nav.top ul li:nth-of-type(3){
+    background: url(images/cw_image03.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-nav .top ul li:nth-of-type(4){
-    background: url(images/cw_image01.png);
+nav.top ul li:nth-of-type(4){
+    background: url(images/cw_image04.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-nav .top ul li:nth-of-type(5){
-    background: url(images/cw_image01.png);
+nav.top ul li:nth-of-type(5){
+    background: url(images/cw_image05.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-nav .top ul li:nth-of-type(6){
-    background: url(images/cw_image01.png);
+nav.top ul li:nth-of-type(6){
+    background: url(images/cw_image06.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-p #links{
-    display: flexbox;
+p#links{
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
 }
 
-p anchor #links{
+p#links a{
     background-color: var(--Nav-active);
     color: white;
     text-decoration: none;
@@ -320,9 +322,10 @@ p anchor #links{
 }
 }
 
-@media(min-width: 480px){
+@media(min-width: 481px){
+
 body{
-    display: flexbox;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -339,19 +342,25 @@ aside{
     flex-shrink: 2;
 }
 
-nav ul .top{
-    display: flexbox;
+nav.top ul{
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: var(--Text-backround);
+    background-color: var(--Shadow);
     height: 50px;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
 }
 
+nav.top ul li{
+    flex-basis: 80px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
 
-
-
+p#links{
+    display: none;
+}
 
 
 
